@@ -1,12 +1,13 @@
 import React, {Component} from "react";
-import CoffeeBeanMenu from "./coffeeBeanMenu";
+import CoffeeBeanMenu from "./IceCreamMenu";
 import BuyForm from "./buyForm";
 
-export default class CoffeeInformationHolder extends React.Component {
+export default class IceCreamInformationHolder extends React.Component {
 constructor(props) {
   super(props);
   this.state = {
     formVisibleOnPage: false,
+    iceCreamMenu: [],
   }
 };
 

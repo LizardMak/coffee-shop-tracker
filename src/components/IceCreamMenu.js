@@ -1,9 +1,10 @@
 import React, {Component} from "react";
 
-export default function CoffeeBeanMenu() {
+export default function IceCreamMenu() {
   return(
     <React.Fragment>
-      <p>Menu of Coffee Beans</p>
+      <hr></hr>
+      <p>Menu</p>
     </React.Fragment>
   )
 }

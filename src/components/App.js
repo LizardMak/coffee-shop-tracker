@@ -1,5 +1,5 @@
 import Header from './Header';
-import CoffeeInformationHolder from './CoffeeInformationHolder';
+import CoffeeInformationHolder from './IceCreamInformationHolder';
 import React from 'react';
 
 
