@@ -9,16 +9,27 @@ constructor(props) {
     formVisibleOnPage: false,
   }
 };
+
+handleClick = () => {
+  this.setState(prevState => ({
+    formVisibleOnPage: !prevState.formVisibleOnPage
+  })); 
+}
+
 render(){
   let currentlyVisibleState = null;
+  let buttonText = null;
   if (this.state.formVisibleOnPage == false) {
     currentlyVisibleState = <CoffeeBeanMenu/>
+    buttonText = "Switch to Restock Mode"
   } else {
     currentlyVisibleState = <BuyForm/>
+    buttonText = "Switch to Sell Mode"
   }
   return(
     <React.Fragment>
       {currentlyVisibleState}
+      <button onClick={this.handleClick}>{buttonText}</button>
     </React.Fragment>
     
   )
