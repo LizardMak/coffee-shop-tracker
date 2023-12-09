@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import CoffeeBeanMenu from "./IceCreamMenu";
+import React from "react";
+import IceCreamMenu from "./IceCreamMenu";
 import BuyForm from "./buyForm";
 
 export default class IceCreamInformationHolder extends React.Component {
@@ -21,7 +21,7 @@ render(){
   let currentlyVisibleState = null;
   let buttonText = null;
   if (this.state.formVisibleOnPage == false) {
-    currentlyVisibleState = <CoffeeBeanMenu/>
+    currentlyVisibleState = <IceCreamMenu iceCreamMenu={this.state.iceCreamMenu}/>
     buttonText = "Switch to Restock Mode"
   } else {
     currentlyVisibleState = <BuyForm/>
@@ -36,4 +36,5 @@ render(){
   )
 }
 }
+
 

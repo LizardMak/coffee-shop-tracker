@@ -1,10 +1,15 @@
 import React, {Component} from "react";
 
-export default function IceCreamMenu() {
+export default function IceCreamMenu(props) {
   return(
     <React.Fragment>
       <hr></hr>
-      <p>Menu</p>
+      {props.iceCreamMenu.map((flavor, index) => 
+      <iceCream name={flavor.name}
+      amount={flavor.amount}
+      key={index}
+      />
+      )}
     </React.Fragment>
   )
 }
